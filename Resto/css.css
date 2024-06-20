@@ -1,0 +1,74 @@
+
+#menuBtn{
+    width: 75%;
+    position: relative;
+    display:inline-block;
+   }
+   h1{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    border: 100%;
+    background-color: cadetblue;
+   }
+
+header{
+    text-align: center;
+}
+body{
+    background:#f1f4c6;
+    }
+button{
+    background-color:#837d7d;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer
+}
+button:hover {
+  background-color:rgba(245, 187, 26, 0.356);
+  color: white;
+}
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item {
+  margin-right: 20px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+}
+
+.item input[type="checkbox"] {
+  margin-right: 10px; /* Adjust as needed */
+ width: 15px;
+  height: 15px;
+}
+.item input[type="number"] {
+  width: 50% ;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item img {
+  max-width: 500px; /* Adjust as needed */
+  max-height: 500px; /* Adjust as needed */
+  margin-right: 10px; /* Adjust as needed */
+  width: 300px;
+  height: 215px;
+}
+label{
+  font-size: 20px;
+  text-align: center;
+}

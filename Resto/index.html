@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSRestaurant</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<style>
+    label {
+        display: block;
+    }
+</style>
+</head>
+<button onclick="history.back()" class="row-lg-3">GO BACK</button>
+<header>
+
+    <h1 style="padding-top: 3%;font-size:50px;"><b>
+            <span style="color: red;">Bus</span> <span style="color: blue;">Station
+            </span><span style="color:darkorange;">Restaurant</span></b></h1>
+    <br>
+
+
+    <div id="menuBtn">
+        <div id="navBar">
+            <a href="#main" class="link">
+                <button>
+                    <b>Main Dish</b>
+                </button>
+            </a>
+
+            <a href="#vegetable" class="link">
+                <button>
+                    <b>Vegetable</b>
+                </button>
+            </a>
+
+
+            <a href="#dessert" class="link">
+                <button>
+                    <b>Desserts</b>
+                </button>
+            </a>
+
+
+            <a href="#drinks" class="link">
+                <button>
+                    <b>Drinks</b>
+                </button>
+            </a>
+
+            <a href="#add" class="link"><button> <b>Add-ons</b></button>
+            </a>
+
+            <button type="button" onclick="calculateTotal()"><b>Amount</b></button>
+        </div>
+    </div>
+    <br><br>
+</header>
+
+
+<body>
+    
+    <h1 id="main" style="text-align: center;font-weight: bold;font-style: italic;border: 100%;background-color: cadetblue;">Main Dish</h1>
+   
+    <div class="item-container"> 
+        <div class="item">
+           
+            <label > <img src="kare.jpg" alt="Kare-kare"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Kare-kare" data-price="200"> <b>Kare-kare (P200)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+            
+            <label>
+                <img src="teriyaki.jpeg" alt="Chicken Teriyaki"> <br>
+                <input type="checkbox" class="item-checkbox" data-name="Chicken Teriyaki" data-price="190"> <b>Chicken Teriyaki (P190)</b><br>
+                 
+            </label>
+        </div>
+        <div class="item">
+          
+            <label> 
+                 <img src="beef.jpeg" alt="Beef Steak"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Beef Steak" data-price="250"><b>Beef Steak (P250)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+           
+            <label> 
+                <img src="bulalo.jpeg" alt="Original Bulalo"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Original Bulalo" data-price="600"> <b>Original Bulalo (P600)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+           
+            <label> 
+                <img src="steam.jpeg" alt="Steam Lapu-lapu"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Steam Lapu-lapu" data-price="450"> <b>Steam Lapu-lapu (P450)</b> <br>
+                 
+            </label>
+        </div>
+    </div>
+</div>
+
+ 
+    <h1 id="vegetable">Vegetable</h1>
+   
+    <div class="item-container" style="align-items: center;"> 
+        <div class="item" >
+           
+            <label > <img src="eggplant.jpeg" alt="Cheesy Eggplant Casserole"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Cheesy Eggplant Casserole" data-price="180"> <b>Cheesy Eggplant Casserole (P180)</b> <br>
+                
+            </label>
+        </div>
+        <div class="item">
+            
+            <label>
+                <img src="pakbet.jpeg" alt="Pinakbet With Bagnet"> <br>
+                <input type="checkbox" class="item-checkbox" data-name="Pinakbet With Bagnet" data-price="120"> <b>Pinakbet With Bagnet (P120)</b><br>
+                 
+            </label>
+        </div>
+        <div class="item">
+          
+            <label> 
+                 <img src="buttered.jpg" alt="Buttered Vegetables"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Buttered Vegetables" data-price="100"><b>Buttered Vegetables (P100)</b> <br>
+                 
+            </label>
+        </div>
+    
+    </div>
+
+    <h1 id="dessert">Desserts</h1>
+   
+    <div class="item-container"> 
+        <div class="item">
+           
+            <label > <img src="pannacotta.jpeg" alt="Mango Pannacota"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Mango Pannacota" data-price="120"> <b>Mango Pannacota (P120)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+            
+            <label>
+                <img src="cake.jpeg" alt="Carrot Cake"> <br>
+                <input type="checkbox" class="item-checkbox" data-name="Carrot Cake" data-price="100"> <b>Carrot Cake (P100)</b><br>
+                 
+            </label>
+        </div>
+        <div class="item">  
+          
+            <label> 
+                 <img src="creme.jpeg" alt="Creme` Brulee"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Creme` Brulee" data-price="120"><b>Creme` Brulee (p120)</b> <br>
+                 
+            </label>
+        </div>
+        
+    </div>
+    <h1 id="drinks">Drinks</h1>
+   
+    <div class="item-container"> 
+        <div class="item">
+           
+            <label > <img src="pineapple.jpeg" alt="Pineapple Juice"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Pineapple Juice" data-price="90"> <b>Pineapple Juice (P90)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+            
+            <label>
+                <img src="buko.jpeg" alt="Buko Juice"> <br>
+                <input type="checkbox" class="item-checkbox" data-name="Buko Juice" data-price="100"> <b>Buko Juice (P100)</b><br>
+                 
+            </label>
+        </div>
+        <div class="item">
+          
+            <label> 
+                 <img src="watermelon.jpeg" alt="Watermelon Juice"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Watermelon Juice" data-price="90"><b>Watermelon Juice (P90)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+           
+            <label> 
+                <img src="basil.jpeg" alt="Fresh Lemon and Basil"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Fresh Lemon and Basil" data-price="120"> <b>Fresh Lemon and Basil (P120)</b> <br>
+                 
+            </label>
+        </div>
+    </div>
+    <h1 id="add">Add-Ons</h1>
+   
+    <div class="item-container"> 
+        <div class="item">
+           
+            <label > <img src="plainrice.jpg" alt="Plain Rice"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Plain Rice" data-price="20"> <b>Plain Rice (P20)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+            
+            <label>
+                <img src="adobo.jpeg" alt="Adobo Rice"> <br>
+                <input type="checkbox" class="item-checkbox" data-name="Adobo Rice" data-price="12"> <b>Adobo Rice (P30)</b><br>
+                 
+            </label>
+        </div>
+        <div class="item">
+          
+            <label> 
+                 <img src="garlicrice.jpg" alt="Garlic Rice"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Garlic Rice" data-price="25"><b>Garlic Rice (25)</b> <br>
+                 
+            </label>
+        </div>
+        <div class="item">
+           
+            <label> 
+                <img src="bottledwater.jpg" alt="Bottled Water"><br>
+                <input type="checkbox" class="item-checkbox" data-name="Bottled Water" data-price="40"> <b>Bottled Water (P40)</b> <br>
+                 
+            </label>
+        </div>
+		  <div>
+        <label for="discount">Select Discount:</label>
+        <select id="discount" name="discount">
+            <option value="0">No Discount</option>
+            <option value="0.1">10% Discount</option>
+            <option value="0.2">20% Discount</option>
+            <option value="0.5">50% Discount</option>
+        </select>
+    </div>
+    </div>
+
+
+
+
+
+
+    <input type="number" class="quantity" min="0" value="0">
+    <script >
+        function calculateTotal() {
+  var checkboxes = document.querySelectorAll('.item-checkbox:checked');
+  var total = 0;
+  var selectedItems = [];
+  checkboxes.forEach(function(checkbox) {
+      var price = parseFloat(checkbox.dataset.price);
+      var quantity = parseInt(checkbox.parentNode.querySelector('.quantity').value);
+      total += price * quantity;
+      if (quantity > 0) {
+          selectedItems.push(checkbox.dataset.name + ' x ' + quantity+ " = " +(price*quantity));
+      }
+  });
+  var totalDisplay = '<h3> Total: <span style="color:red;">P' + total.toFixed(2)+'</span>'+'</h3>';
+  if (selectedItems.length > 0) {
+      totalDisplay += '<br><br>Selected Items: <br><br>' + selectedItems.join('<br>  ');
+  }
+  var childWindow = window.open('', '_blank', 'width=400,height=400');
+  childWindow.document.write('<h1 style="text-align:center;">BSR Receipt</h1><p>' + totalDisplay + '</p>');
+  
+  const discountedTotal = total - (total * discount);
+}
+    </script>
+</body>
+</html>
